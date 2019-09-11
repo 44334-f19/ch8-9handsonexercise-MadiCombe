@@ -1,13 +1,113 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en"> 
 	<head> 
-		<title>LASTNAME Chapter8-9HandsOnExercise</title> 
+		<title>Combe Chapter8-9HandsOnExercise</title> 
 		<meta charset="utf-8"> 
 		<style>
-		
+            table{margin:auto;
+                border: 5px solid #8B0023;
+                border-spacing: 0px;
+                background-color: #F9678C;
+            }
+             td,th{padding: 0.7em;                
+            }
+            caption{font-size: 1.5em;
+                font-family: Arial, sans-serif;
+            }
+            #wrapper {display: flex;
+                flex-direction: row;
+            }
+            #pt1{flex:2;}
+            #pt2{flex:4;}
+            #pt3{flex:1;}
+            
+            @media only screen and (max-width: 1024px) {
+                #wrapper{display: flex;
+                    flex-direction: column;
+                }
+                
+            }		
+            @media only screen and (max-width: 768px) {
+         	  #wrapper{display: flex;
+                    flex-direction: column;
+            }
 		</style>
-	</head> 
+	</head>  
 <body> 
+<table>
+<caption>My Favorite Movie</caption>
+    <thread>
+        <tr>
+        <th id="info">Information</th>
+        <th id="desc">Description</th>
+        </tr>
+    </thread>
+    <tbody>
+        <tr>
+        <td headers="info">Title: Spider-man: Far From Home</td>
+        </tr>
+        <tr>
+        <td headers="info">Director: Jon Watts</td><br>
+        </tr>
+        <tr>
+        <td headers="info">Leading Actor: Tom Holland</td><br>
+        </tr>
+        <tr>
+        <td headers="info">Leading Actress: Zendaya</td><br>
+        </tr>   
+        <tr>
+        <td headers="info">Rating: PG-13</td>
+        </tr>
+        <tr>
+        <td headers="desc">Description: Spider-man and his friends go on an action packed adventure, filled with suspense and danger.<br>On a school field trip over-seas, a villain begins attacking the cities the group is visiting.<br>It is up to Spider-man to stop him and keep his identity safe.</td>
+        </tr>
+        <tr>
+        <td headers="desc">Review: <a href="https://www.rottentomatoes.com/m/spider_man_far_from_home">Click Here!</a></td>
+        </tr>
+    </tbody>
+</table>
+<h1>Music Survey</h1>
+     <div id="wrapper">
+        
+         <fieldset id="pt1">
+             <legend>Personal Information</legend>
+            <label for="myName">Name:</label><br>
+            <input type="text" name="myName" id="myName" placeholder="Your Name Here"><br>
+            <label for="myEmail">E-mail:</label><br>
+            <input type="text" name="myEmail" id="myEmail" placeholder="your@yourdomain.com"><br>
+        <label>Please Select Your Gender:</label><br>
+        <select size="3" name="gender" id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="other">Other</option>
+            <option value="pnts">Prefer not to say</option>
+        </select>
+        </fieldset>
+        
+         <fieldset id="pt2">
+             <legend>I Listen to Music:</legend>
+            <input type="radio" name="choice" id="some" value="Sometimes">Sometimes<br>
+            <input type="radio" name="choice" id="reg" value="Regularly">Regularly<br>            
+            <input type="radio" name="choice" id="never" value="Never">Never<br><br>
+             
+             <legend>Select Your Favorite Genre(s):</legend>
+            <input type="checkbox" name="genre" id="rock" value="Rock">Rock<br>
+            <input type="checkbox" name="genre" id="pop" value="Pop">Pop<br>
+            <input type="checkbox" name="genre" id="hiphop" value="Hip Hop">Hip Hop<br>
+            <input type="checkbox" name="genre" id="country" value="Country">Country<br>
+            <input type="checkbox" name="genre" id="electronic" value="Electronic">Electronic<br>
+            <input type="checkbox" name="genre" id="classical" value="Classical">Classical<br>
+            <input type="checkbox" name="genre" id="other" value="Other">Other<br><br>
 
-</body> 
+            <label for="Comment">Comments</label>
+            <textarea for="Comment" id="Comment" rows="3" cols="60"></textarea>
+         </fieldset>
+           
+         <fieldset id="pt3">
+             <legend>Submit or Reset</legend>
+            <input id="Submit" type="submit" value="Submit">
+            <input id="Reset" type="reset" value="Reset">
+        </fieldset>
+    </div>
+</body>
 </html> 
